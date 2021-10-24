@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERR_CompressArchive" xml:space="preserve">
+    <value>Error compressing archive '{0}' using format '{1}'.\n{2}</value>
+    <comment>0 - Archive path, 1 - Compression format, 2 - exception data</comment>
+  </data>
+  <data name="ERR_CreateCompressor" xml:space="preserve">
+    <value>Error creating new archive compressor.</value>
+  </data>
+  <data name="ERR_CreateExtractor" xml:space="preserve">
+    <value>Error creating archive extractor.</value>
+  </data>
+  <data name="ERR_DecompressArchive" xml:space="preserve">
+    <value>An error occurred while decompressing archive to the specified directory '{0}'\n{1}</value>
+    <comment>0 - Directory path, 1 - exception data</comment>
+  </data>
+  <data name="ERR_DecompressFile" xml:space="preserve">
+    <value>Error decompressing file '{0}' from archive to the specified location '{1}'\n{2}</value>
+    <comment>0 - File path, 1 - archive extract location, 2 - exception data</comment>
+  </data>
+  <data name="ERR_DirectoryNotFound" xml:space="preserve">
+    <value>The '{0}' directory could not be found.</value>
+    <comment>0 - Directory path</comment>
+  </data>
+  <data name="ERR_DirNotExistCreated" xml:space="preserve">
+    <value>The directory '{0}' does not exist and could not be created.\n{1}</value>
+    <comment>0 - Directory path, 1 - exception data</comment>
+  </data>
+  <data name="ERR_FileNotFound" xml:space="preserve">
+    <value>The {0} file could not be found.</value>
+    <comment>0 - File name</comment>
+  </data>
+  <data name="ERR_FormsAuthNull" xml:space="preserve">
+    <value>Forms authentication delegate cannot be null.</value>
+  </data>
+  <data name="ERR_InvalidResponseId" xml:space="preserve">
+    <value>Invalid response ID received from input.</value>
+  </data>
+  <data name="ERR_NullOrEmpty" xml:space="preserve">
+    <value>{0} cannot be null or empty.</value>
+    <comment>0 - Object that was referenced</comment>
+  </data>
+  <data name="ERR_PageHandlerNull" xml:space="preserve">
+    <value>HttpContext.Current page handler cannot be null.</value>
+  </data>
+  <data name="ERR_WebReqResponseNull" xml:space="preserve">
+    <value>Web request response stream cannot be null.</value>
+  </data>
+  <data name="ERR_WebResponeNull" xml:space="preserve">
+    <value>Web request response cannot be null.</value>
+  </data>
+  <data name="InternalExceptionMessage" xml:space="preserve">
+    <value>Internal error occurred. Additional information: '{0}'.</value>
+    <comment>0 - Exception Data</comment>
+  </data>
+  <data name="Dictionary_CollectionOrKey_NotNull" xml:space="preserve">
+    <value>The dictionary collection and/or key cannot be null.</value>
+  </data>
+  <data name="ComputerBrowserDialogInvalidOpEx" xml:space="preserve">
+    <value>The location of the root folder from which to start browsing. Only the specified folder and any subfolders that are beneath it will appear in the dialog box.</value>
+  </data>
+  <data name="ComputerBrowserDialogThreadStateEx" xml:space="preserve">
+    <value>Current thread must be set to single thread apartment (STA) mode before OLE calls can be made. Ensure that your Main function has STAThreadAttribute marked on it.</value>
+  </data>
+  <data name="MessageBoxTimeoutHelpButtonEx" xml:space="preserve">
+    <value>Showing a service notification message box with a Help button is not a valid operation.</value>
+  </data>
+  <data name="MessageBoxTimeoutNoUserInteractiveEx" xml:space="preserve">
+    <value>Showing a modal dialog box or form when the application is not running in UserInteractive mode is not a valid operation. Specify the ServiceNotification or DefaultDesktopOnly style to display a notification from a service application.</value>
+  </data>
+  <data name="MessageBoxTimeoutNoWindowOwner" xml:space="preserve">
+    <value>Showing a service notification message box with an owner window is not a valid operation. Use the Show method that does not take an owner.</value>
+  </data>
+  <data name="ERR_DictIndexOutBounds" xml:space="preserve">
+    <value>The index was outside the bounds of the dictionary.</value>
+  </data>
+  <data name="ERR_FailedAdjustPriv" xml:space="preserve">
+    <value>Failed to adjust process token privileges.</value>
+  </data>
+  <data name="ERR_FailedOpenHandle" xml:space="preserve">
+    <value>Failed to open process token handle.</value>
+  </data>
+  <data name="ERR_FailedOpenShutdownPriv" xml:space="preserve">
+    <value>Failed to open lookup shutdown privilege.</value>
+  </data>
+  <data name="ERR_FailedReboot" xml:space="preserve">
+    <value>Failed to reboot system.</value>
+  </data>
+  <data name="ERR_Impersonation" xml:space="preserve">
+    <value>A user impersonation error has occurred.</value>
+  </data>
+  <data name="ERR_MaxNotLessThanZero" xml:space="preserve">
+    <value>Max cannot be less than zero.</value>
+  </data>
+  <data name="ERR_MinNotGreaterThanMax" xml:space="preserve">
+    <value>Min cannot be greater than max.</value>
+  </data>
+  <data name="ERR_MustBeType" xml:space="preserve">
+    <value>Must be of type</value>
+  </data>
+  <data name="ERR_NonNegativeValue" xml:space="preserve">
+    <value>Must be non-negative value.</value>
+  </data>
+  <data name="ERR_NonNegativeValueAndLessSize" xml:space="preserve">
+    <value>Must be non-negative and less than the size of the collection.</value>
+  </data>
+  <data name="ERR_NotGreaterThanBuffer" xml:space="preserve">
+    <value>Cannot be greater than random buffer.</value>
+  </data>
+  <data name="ERR_ObjectMustBeOfType" xml:space="preserve">
+    <value>Object must be of type {0}.</value>
+    <comment>0 - Type of object</comment>
+  </data>
+  <data name="ERR_PathNotResolved" xml:space="preserve">
+    <value>The path provided could not be resolved.</value>
+  </data>
+  <data name="ERR_RegistryKeyNull" xml:space="preserve">
+    <value>Registry key cannot be null.</value>
+  </data>
+  <data name="ERR_StringTimeSpanFormat" xml:space="preserve">
+    <value>String to be converted must be in the following format: [HH],[MM],[SS].</value>
+  </data>
+  <data name="ERR_TypeNotSerializable" xml:space="preserve">
+    <value>The type must be serializable.</value>
+  </data>
+  <data name="ERR_ValueNullAndNotIEmailMessage" xml:space="preserve">
+    <value>The value 'null' was found where an instance of IEmailMessage was expected.</value>
+  </data>
+  <data name="ERR_ValueOutOfRange" xml:space="preserve">
+    <value>{0} value is out of range.</value>
+    <comment>0 - Type of object</comment>
+  </data>
+  <data name="ERR_DB_CanNotCompact" xml:space="preserve">
+    <value>Database {0} can not be compacted because it is currently in use by another application.</value>
+    <comment>0 - Database name</comment>
+  </data>
+  <data name="ERR_DB_CanNotDelete" xml:space="preserve">
+    <value>Database {0} already exists and can not be deleted.</value>
+    <comment>0 - Database name</comment>
+  </data>
+  <data name="ERR_DB_Compact" xml:space="preserve">
+    <value>An error occurred compacting an {0} database.</value>
+    <comment>0 - Database provider name</comment>
+  </data>
+  <data name="ERR_DB_Copy" xml:space="preserve">
+    <value>The option of copying an {0} database file is not supported.</value>
+    <comment>0 - Database provider type</comment>
+  </data>
+  <data name="ERR_DB_InvalidProvider" xml:space="preserve">
+    <value>Database provider must be of type {0}.</value>
+    <comment>0 - Database provider name</comment>
+  </data>
+  <data name="ERR_ExceptionExecuting" xml:space="preserve">
+    <value>Exception occurred executing {0}.</value>
+    <comment>0 - Object that was executing</comment>
+  </data>
+  <data name="ERR_InstanceNotNull" xml:space="preserve">
+    <value>{0} instance cannot be null.</value>
+  </data>
+  <data name="ERR_LocationNotNull" xml:space="preserve">
+    <value>The {0} location cannot be null.</value>
+    <comment>0 Object </comment>
+  </data>
+  <data name="ERR_ObjectNotNull" xml:space="preserve">
+    <value>The {0} object cannot be null.</value>
+    <comment>0 - Object type</comment>
+  </data>
+  <data name="ERR_ProviderNotNull" xml:space="preserve">
+    <value>The {0} provider cannot be null.</value>
+    <comment>0 - Database provider</comment>
+  </data>
+  <data name="ERR_ConfigIniIncorrectParms" xml:space="preserve">
+    <value>Key has incorrect parameters. Key should be [Section]:[Key].</value>
+  </data>
+  <data name="ERR_ConfigKeyPrefix" xml:space="preserve">
+    <value>Key must begin with AppSettings or ConnectionStrings and then the unique key. For example, AppSettings:UserMode or ConnectionStrings:DbName</value>
+  </data>
+  <data name="ERR_ConfigRegistryIncorrectParms" xml:space="preserve">
+    <value>Key has incorrect parameters. Key should be [KeyName]:[ValueName].</value>
+  </data>
+  <data name="ERR_ClassTypeMustBeInterface" xml:space="preserve">
+    <value>Class generic type must be of type interface.</value>
+  </data>
+  <data name="ERR_DeserializingInnerEx" xml:space="preserve">
+    <value>An error occurred deserializing {0}. See inner exception for more details.</value>
+    <comment>0 - Operation</comment>
+  </data>
+  <data name="ERR_SerializingInnerEx" xml:space="preserve">
+    <value>An error occurred serializing {0}. See inner exception for more details.</value>
+  </data>
+  <data name="ERR_StreamNotReadable" xml:space="preserve">
+    <value>Stream does not support reading.</value>
+  </data>
+  <data name="ERR_StreamNotWritable" xml:space="preserve">
+    <value>Stream does not support writing.</value>
+  </data>
+  <data name="ERR_MissingPropertyName" xml:space="preserve">
+    <value>Error finding the specified property name. Ensure the specified property name [{0}] is a member of the current object.</value>
+    <comment>0 - Property Name</comment>
+  </data>
+  <data name="ERR_NoKeyColumnsFound" xml:space="preserve">
+    <value>No key columns found. A minimum of 1 key is required.</value>
+  </data>
+  <data name="ERR_NoPropertiesFound" xml:space="preserve">
+    <value>No properties were found to build query.</value>
+  </data>
+  <data name="ERR_RedisConnectionNotNullOrEmpty" xml:space="preserve">
+    <value>Redis connection string cannot be empty. See documentation on how to set the connection string.</value>
+  </data>
+  <data name="ERR_RedisInvalidSerializerConfiguration" xml:space="preserve">
+    <value>Invalid serializer configuration. Either both the serializer and deserializer must be set or both must be null.</value>
+  </data>
+</root>
