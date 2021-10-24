@@ -2,13 +2,14 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net40;netcoreapp3.0</TargetFrameworks>
-		<AssemblyName>Oliviann.Reuse.Windows.WPF</AssemblyName>
+		<AssemblyName>Oliviann.Reuse.Windows.Forms</AssemblyName>
 		<PackageId>$(AssemblyName)</PackageId>
 		<Title>$(AssemblyName)</Title>
-		<RootNamespace>Oliviann.Windows</RootNamespace>
+		<RootNamespace>Oliviann.Windows.Forms</RootNamespace>
 
-		<Description>A library make developing Windows Presentation Foundation applications easier.</Description>
-		<PackageTags>reuse windows wpf</PackageTags>
+		<Description>A library make developing Windows Forms applications easier.</Description>
+		<PackageTags>reuse windows winforms</PackageTags>
+		<UseWindowsForms>true</UseWindowsForms>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
@@ -21,6 +22,7 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net40'">
 		<Reference Include="PresentationCore" />
 		<Reference Include="PresentationFramework" />
+		<Reference Include="System.Windows.Forms" />
 		<Reference Include="System.Xaml" />
 		<Reference Include="WindowsBase" />
 	</ItemGroup>
