@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net45;netcoreapp2.0</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Data.Common</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann.Data</RootNamespace>
+
+		<Description>A data library built for creating dynamic database query strings.</Description>
+		<PackageTags>reuse db query</PackageTags>
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+		<PackageReference Include="SqlKata" Version="1.1.7" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<Reference Include="System.ComponentModel.DataAnnotations" />
+		<PackageReference Include="SqlKata" Version="1.1.7" />
+	</ItemGroup>
+
+</Project>

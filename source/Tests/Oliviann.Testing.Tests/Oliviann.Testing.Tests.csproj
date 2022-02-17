@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net45;netcoreapp2.0</TargetFrameworks>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<Import Project="..\..\UnitTesting.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Oliviann.Testing\Oliviann.Testing.csproj" />
+	</ItemGroup>
+
+</Project>

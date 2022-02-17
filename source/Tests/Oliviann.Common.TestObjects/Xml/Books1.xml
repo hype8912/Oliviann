@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<catalog>
+  <books>
+    <book id="01">
+      <author>Gambardella, Matthew</author>
+      <description>An in-depth look at creating applications with XML.</description>
+      <title>XML Developer's Guide</title>
+      <year>2000</year>
+    </book>
+    <book id="02">
+      <author>Ralls, Kim</author>
+      <description>A former architect battles corporate zombies, an evil sorceress, and her own childhood to become queen of the world.</description>
+      <title>Midnight Rain</title>
+      <year>2000</year>
+    </book>
+    <book id="03">
+      <author>Knorr, Stefan</author>
+      <description>An anthology of horror stories about roaches, centipedes, scorpions  and other insects.</description>
+      <title>Creepy Crawlies</title>
+      <year>2000</year>
+    </book>
+    <book id="04">
+      <author>Corets, Eva</author>
+      <description>In post-apocalypse England, the mysterious agent known only as Oberon helps to create a new life for the inhabitants of London. Sequel to Maeve Ascendant.</description>
+      <title>Oberon's Legacy</title>
+      <year>2001</year>
+    </book>
+  </books>
+</catalog>

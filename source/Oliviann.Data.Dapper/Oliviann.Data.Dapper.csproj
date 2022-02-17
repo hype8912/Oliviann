@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net40;net45;net451;netstandard2.0</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Data.Dapper</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann.Data</RootNamespace>
+
+		<Description>A library that extends the capability of the Oliviann.Data library by adding in extension methods that use the Dapper ORM library.</Description>
+		<PackageTags>reuse db dapper</PackageTags>
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Data\Oliviann.Data.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Dapper" Version="1.50.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net451'">
+		<PackageReference Include="Dapper" Version="1.50.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<PackageReference Include="Dapper" Version="1.50.2" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+		<PackageReference Include="Dapper" Version="1.50.2" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net35'">
+		<PackageReference Include="Dapper" Version="1.42.0" />
+	</ItemGroup>
+
+</Project>

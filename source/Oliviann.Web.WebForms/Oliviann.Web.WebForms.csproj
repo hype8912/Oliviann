@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net40</TargetFrameworks>
+    <AssemblyName>Oliviann.Reuse.Web.WebForms</AssemblyName>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Title>$(AssemblyName)</Title>
+    <RootNamespace>Oliviann.Web</RootNamespace>
+
+    <Description>A library to make working with ASP.NET Web Forms easier.</Description>
+    <PackageTags>reuse asp.net webforms</PackageTags>
+  </PropertyGroup>
+
+  <Import Project="..\OliviannInfo.targets" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+    <ProjectReference Include="..\Oliviann.Web\Oliviann.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+
+</Project>

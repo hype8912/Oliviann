@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net45</TargetFrameworks>
+    </PropertyGroup>
+
+    <Import Project="..\..\UnitTesting.targets" />
+
+    <ItemGroup>
+        <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Oliviann.IO.Compression\Oliviann.IO.Compression.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="TestObjects\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\Libs\7za.exe" Link="7za.exe">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="..\Oliviann.Tests\TestObjects\TestArchive.7z" Link="TestObjects\TestArchive.7z">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="..\Oliviann.Tests\TestObjects\TestArchive_NoPass.7z" Link="TestObjects\TestArchive_NoPass.7z">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>

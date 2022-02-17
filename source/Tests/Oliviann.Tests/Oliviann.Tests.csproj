@@ -1,0 +1,124 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net47</TargetFrameworks>
+        <AssemblyName>Oliviann.Common.Tests</AssemblyName>
+        <RootNamespace>Oliviann.Tests</RootNamespace>
+        <Version>1.0.1.9</Version>
+        <!--<Title>$(AssemblyName)</Title>-->
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+        <!--<DebugSymbols>true</DebugSymbols>
+        <DebugType>Full</DebugType>	  
+        <IsPackable>false</IsPackable>-->
+    </PropertyGroup>
+
+    <Import Project="..\..\UnitTesting.targets" />
+
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.ComponentModel.Composition" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Core">
+            <RequiredTargetFramework>3.5</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="System.Data" />
+        <Reference Include="System.Data.Services" />
+        <Reference Include="System.Runtime.Caching" />
+        <Reference Include="System.Runtime.Serialization" />
+        <Reference Include="System.ServiceModel" />
+        <Reference Include="System.ServiceModel.Web" />
+        <Reference Include="System.ServiceProcess" />
+        <Reference Include="System.Web" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Windows.Forms.4.0.0.0.Fakes">
+            <HintPath>FakesAssemblies\System.Windows.Forms.4.0.0.0.Fakes.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="WindowsBase" />
+        <PackageReference Include="Microsoft.QualityTools.Testing.Fakes" Version="16.11.230815" />
+        <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+        <PackageReference Include="System.Memory" Version="4.5.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\..\Oliviann.Caching\Oliviann.Caching.csproj" />
+        <ProjectReference Include="..\..\Oliviann.Common\Oliviann.Common.csproj" />
+        <ProjectReference Include="..\..\Oliviann.Configuration\Oliviann.Configuration.csproj" />
+        <ProjectReference Include="..\..\Oliviann.ServiceModel\Oliviann.ServiceModel.csproj" />
+        <ProjectReference Include="..\..\Oliviann.Testing\Oliviann.Testing.csproj" />
+        <ProjectReference Include="..\..\Oliviann.Windows.Forms\Oliviann.Windows.Forms.csproj" />
+        <ProjectReference Include="..\Oliviann.Common.TestObjects\Oliviann.Common.TestObjects.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Caching\Providers\" />
+        <Folder Include="Properties\" />
+        <Folder Include="ServiceModel\Channel\" />
+        <Folder Include="ServiceModel\Web\" />
+        <Folder Include="FakesAssemblies\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="TestObjects\EmptyFile.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Fakes Include="Fakes\System.Windows.Forms.fakes" />
+        <None Include="TestObjects\HashFiles\99.htm">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\C13002_12_0_Versioning_Summary.htm">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\C130OPT2_07_1.BIOLOG.CGM">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\PackageManifest.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\style.xslt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\TAIL_NUMBER_AND_MSN.htm">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\web.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <Content Include="TestObjects\ReadMe.txt" />
+        <None Include="TestObjects\INI\Large_Unicode.ini">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None >
+        <None Include="TestObjects\INI\Medium_Strings.ini" />
+        <None Include="TestObjects\INI\Medium_Strings2.ini" />
+        <None Include="TestObjects\TestArchive_NoPass.7z">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="App.config">
+            <SubType>Designer</SubType>
+        </None>
+        <None Include="TestObjects\HashFiles\24-50-01-00-01.chg10.a50355-01.cgm4">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\HashFiles\99-10-01-01-03.chg11.c01044-01.cgm4">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\INI\AutoImports.ini">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\INI\BadSection.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\INI\Multiline.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\INI\Normal.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="TestObjects\TestArchive.7z">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

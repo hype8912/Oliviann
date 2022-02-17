@@ -1,0 +1,18 @@
+﻿***** Test_7ZipCompression_CheckArchivePasswordProtected_Small *****
+C:\Users\1545853\Documents\Git\oliviann-reusable-library\src\TestResults\Deploy_1545853 2016-01-12 12_42_08\Out>7za.exe
+t -pmI$JQP7o0bLy_8RGgB "C:\Users\1545853\AppData\Local\Temp\tmpFEED\TestArchive.7z"
+
+7-Zip (a) [32] 15.12 : Copyright (c) 1999-2015 Igor Pavlov : 2015-11-19
+
+Scanning the drive for archives:
+1 file, 455 bytes (1 KiB)
+
+Testing archive: C:\Users\1545853\AppData\Local\Temp\tmpFEED\TestArchive.7z
+ERROR: C:\Users\1545853\AppData\Local\Temp\tmpFEED\TestArchive.7z
+Can not open encrypted archive. Wrong password?
+
+
+Can't open as archive: 1
+Files: 0
+Size:       0
+Compressed: 0

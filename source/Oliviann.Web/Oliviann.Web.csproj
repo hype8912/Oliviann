@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
+        <AssemblyName>Oliviann.Reuse.Web</AssemblyName>
+        <PackageId>$(AssemblyName)</PackageId>
+        <Title>$(AssemblyName)</Title>
+        <RootNamespace>Oliviann</RootNamespace>
+
+        <Description>A library of tools, controls, and extensions to make working with ASP.NET and web services easier.</Description>
+        <PackageTags>reuse asp.net webapi mvc</PackageTags>
+    </PropertyGroup>
+
+    <Import Project="..\OliviannInfo.targets" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+    </ItemGroup>
+
+    <!--<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>-->
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.0" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    </ItemGroup>
+
+    <!--<ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+  </ItemGroup>-->
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Runtime.Caching" />
+        <Reference Include="System.Web" />
+        <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.0.2" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Runtime.Caching" />
+        <Reference Include="System.Web" />
+        <!--<PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />-->
+        <PackageReference Include="Microsoft.Net.Http" Version="2.0.20710" />
+        <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net35'">
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Web.Abstractions" />
+        <Reference Include="System.Web" />
+        <PackageReference Include="Rackspace.HttpClient35" Version="1.0.0-beta003" />
+        <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+    </ItemGroup>
+
+</Project>

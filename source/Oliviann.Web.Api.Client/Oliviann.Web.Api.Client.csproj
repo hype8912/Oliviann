@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net40;netstandard2.0</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Web.Api.Client</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann</RootNamespace>
+
+		<Description>A library for consuming REST APIs by dynamically generation.</Description>
+		<PackageTags>reuse asp.net rest castle</PackageTags>
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+		<ProjectReference Include="..\Oliviann.Web.Api\Oliviann.Web.Api.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Castle.Core" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+		<PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+		<PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+		<PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+		<PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
+	</ItemGroup>
+
+</Project>

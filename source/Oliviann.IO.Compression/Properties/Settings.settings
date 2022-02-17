@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Oliviann.IO.Compression.Properties" GeneratedClassName="Settings">
+  <Profiles/>
+  <Settings>
+    <Setting Name="TestArchivePassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mI$JQP7o0bLy_8RGgB</Value>
+    </Setting>
+    <Setting Name="LibraryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\7-Zip\7z.exe</Value>
+    </Setting>
+    <Setting Name="Library32bitPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\7-Zip\7z.exe</Value>
+    </Setting>
+    <Setting Name="ApplicationFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">7za.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

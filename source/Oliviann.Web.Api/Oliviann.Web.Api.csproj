@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Web.Api</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann</RootNamespace>
+
+		<Description>A library of tools, controls, and extensions to make working with ASP.NET and web services easier.</Description>
+		<PackageTags>reuse asp.net webapi mvc</PackageTags>
+		<NoWarn>CS1998</NoWarn>
+
+		<!--<AppConfig Condition="'$(TargetFramework)' == 'net40'">app.net40.config</AppConfig>-->
+		<!--<AutoUnifyAssemblyReferences Condition="'$(TargetFramework)' == 'net40'">false</AutoUnifyAssemblyReferences>-->
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Caching\Oliviann.Caching.csproj" />
+		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+		<ProjectReference Include="..\Oliviann.Web\Oliviann.Web.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Runtime.Caching" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Runtime.Caching" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Runtime.Caching" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Runtime.Caching" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="4.0.30506" />
+		<!--<PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />-->
+	</ItemGroup>
+
+</Project>

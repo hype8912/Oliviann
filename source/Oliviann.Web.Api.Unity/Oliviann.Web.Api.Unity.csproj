@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
+        <AssemblyName>Oliviann.Reuse.Web.Api.Unity</AssemblyName>
+        <PackageId>$(AssemblyName)</PackageId>
+        <Title>$(AssemblyName)</Title>
+        <RootNamespace>Oliviann.Web.Api.Unity</RootNamespace>
+        <NoWarn>NU1701</NoWarn>
+        
+        <Description>A collection of extension methods to make working with Unity easier.</Description>
+        <PackageTags>reuse unity ioc</PackageTags>
+    </PropertyGroup>
+
+    <Import Project="..\OliviannInfo.targets" />
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.4" />
+        <PackageReference Include="Unity.Abstractions" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
+        <PackageReference Include="Unity.Abstractions" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="4.0.30506" />
+        <PackageReference Include="Unity.Abstractions" Version="2.0.0" />
+    </ItemGroup>
+
+</Project>

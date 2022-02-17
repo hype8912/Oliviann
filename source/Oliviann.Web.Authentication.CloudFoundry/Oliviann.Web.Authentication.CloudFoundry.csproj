@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Web.Authentication.CloudFoundry</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann.Web.Authentication</RootNamespace>
+
+		<Description>A library for simplifying the implementation of SSO tile in Cloud Foundry.</Description>
+		<PackageTags>reuse sso cf</PackageTags>
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="2.1.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.0" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net40;netcoreapp2.0</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Caching.NCache</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann.Caching</RootNamespace>
+
+		<Description>A library that creates a common interface for NCache cache.</Description>
+		<PackageTags>reuse caching ncache</PackageTags>
+		<NoWarn>NU1608</NoWarn>
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Caching\Oliviann.Caching.csproj" />
+		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+		<PackageReference Include="System.ServiceProcess.ServiceController" Version="4.5.0" />
+		<PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />
+		<PackageReference Include="Alachisoft.NCache.SDK" Version="4.9.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+		<PackageReference Include="System.ServiceProcess.ServiceController" Version="4.5.0" />
+		<PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />
+		<PackageReference Include="Alachisoft.NCache.SDK" Version="4.9.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+		<PackageReference Include="Alachisoft.NCache.SDK" Version="4.9.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+		<PackageReference Include="Alachisoft.NCache.SDK" Version="4.9.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<PackageReference Include="Alachisoft.NCache.SDK" Version="4.9.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+		<PackageReference Include="Alachisoft.NCache.SDK" Version="4.9.0" />
+	</ItemGroup>
+
+</Project>

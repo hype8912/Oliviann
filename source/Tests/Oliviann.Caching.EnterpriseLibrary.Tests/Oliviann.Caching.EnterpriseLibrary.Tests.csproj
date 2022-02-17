@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net45;net451;net452;net46;net461;net462;net47;net471;net472;net48</TargetFrameworks>
+    </PropertyGroup>
+
+    <Import Project="..\..\UnitTesting.targets" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Oliviann.Caching.EnterpriseLibrary\Oliviann.Caching.EnterpriseLibrary.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304" />
+    </ItemGroup>
+
+</Project>

@@ -11,8 +11,6 @@
     /// Represents a collection of commonly used extension methods for extending
     /// DateTime objects.
     /// </summary>
-    [SuppressMessage("Microsoft.StyleCop.CSharp.DocumentationRules", "SA1631:DocumentationMustMeetCharacterPercentage",
-        Justification = "Examples show an output example.")]
     public static class DateTimeExtensions
     {
         /// <summary>

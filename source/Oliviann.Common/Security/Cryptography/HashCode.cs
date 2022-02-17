@@ -53,7 +53,6 @@
             hash += 4;
 
             hash = QueueRound(hash, hc1);
-
             hash = MixFinal(hash);
             return (int)hash;
         }
@@ -514,10 +513,7 @@
             return v1.RotateLeft(1) + v2.RotateLeft(7) + v3.RotateLeft(12) + v4.RotateLeft(18);
         }
 
-        private static uint MixEmptyState(uint seed)
-        {
-            return seed + Prime5;
-        }
+        private static uint MixEmptyState(uint seed) => seed + Prime5;
 
         /// <summary>
         /// Performs the final hash of the data. Casts magic spells and performs

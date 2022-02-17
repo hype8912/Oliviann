@@ -720,10 +720,7 @@
         /// <returns>True if the <see cref="OrderedDictionary{TKey,TValue}"/>
         /// contains an element with the specified key; otherwise, false.
         /// </returns>
-        public bool TryGetValue(TKey key, out TValue value)
-        {
-            return this.Dictionary.TryGetValue(key, out value);
-        }
+        public bool TryGetValue(TKey key, out TValue value) => this.Dictionary.TryGetValue(key, out value);
 
         /// <summary>
         /// Determines whether the <see cref="OrderedDictionary{TKey,TValue}"/>
@@ -751,10 +748,7 @@
         /// element with the specified key; otherwise, false.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is
         /// null.</exception>
-        public bool ContainsKey(TKey key)
-        {
-            return this.Dictionary.ContainsKey(key);
-        }
+        public bool ContainsKey(TKey key) => this.Dictionary.ContainsKey(key);
 
         /// <summary>
         /// Determines whether the <see cref="OrderedDictionary{TKey,TValue}"/>
@@ -770,10 +764,7 @@
         /// <exception cref="ArgumentException">The key type of the
         /// <see cref="OrderedDictionary{TKey,TValue}"/> is not in the
         /// inheritance hierarchy of <paramref name="key"/>.</exception>
-        bool IDictionary.Contains(object key)
-        {
-            return this.ContainsKey(ConvertToKeyType(key));
-        }
+        bool IDictionary.Contains(object key) => this.ContainsKey(ConvertToKeyType(key));
 
         /// <summary>
         /// Returns the zero-based index of the specified key in the
@@ -830,10 +821,7 @@
         /// <remarks>Preserves the order of the elements in the
         /// <see cref="OrderedDictionary{TKey,TValue}"/>
         /// </remarks>
-        void ICollection.CopyTo(Array array, int index)
-        {
-            ((ICollection)this.List).CopyTo(array, index);
-        }
+        void ICollection.CopyTo(Array array, int index) => ((ICollection)this.List).CopyTo(array, index);
 
         /// <summary>
         /// Copies the elements of the

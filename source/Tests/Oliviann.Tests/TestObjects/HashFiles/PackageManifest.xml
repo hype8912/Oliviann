@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImisUpdate imisconfiguration="all" guid="2658E12C-3587-4D6D-8631-E50A355BB581" customer="C130" dataset="C13002_14_5" date="06032014" type="Full">
+  <SystemRequirements>
+  - <!--  DCW Check --> 
+  <InstalledProgram imisconfiguration="updatable" guid="DC054456-8D6C-44A9-8778-DB6E99CB3854" state="installed" minversion="5.1.0.0" /> 
+- <!--  WIW Check --> 
+- <InstalledProgram imisconfiguration="updatable" guid="F5C18F5B-059B-4169-84A6-9129C8819691" state="installed" minversion="1.14.0.0" /> 
+  </SystemRequirements>
+  <LastUpdate>
+    <Type>Full</Type>
+    <Guid>2658E12C-3587-4D6D-8631-E50A355BB581</Guid>
+    <Dataset>C13002_14_5</Dataset>
+    <DateApplied>06032014</DateApplied>
+    <Checksum></Checksum>
+  </LastUpdate>
+  <AppliedUpdates>
+    <AppliedUpdate>
+      <Type>Full</Type>
+      <Guid>2658E12C-3587-4D6D-8631-E50A355BB581</Guid>
+      <Dataset>C13002_14_5</Dataset>
+      <CreationDate>06032014</CreationDate>
+    </AppliedUpdate>
+  </AppliedUpdates>
+  <Updates>
+    <SqlSnapshotUpdate imisconfiguration="updatable" path="DCW\Database\snapshot.idbss">
+      <Database>DCW_DB</Database>
+      <User>ImisAdmin</User>
+      <Password>툏涣㽐੸퇖橊ᄛ壠徿గ륬䣸䙖Ԋᶵ㫚⿖悢ꖀ曜Ốꔩ혁啱</Password>
+    </SqlSnapshotUpdate>
+    <FolderUpdate imisconfiguration="updatable" path="DCW\Graphics\Graphics.7z" destination="[ImisInstallDir]\IMIS_IETM\graphics\"/>
+    <SqlSnapshotUpdate imisconfiguration="updatable" path="WIW\Database\snapshot.idbss">
+      <Database>WIW_DB</Database>
+      <User>ImisAdmin</User>
+      <Password>툏涣㽐੸퇖橊ᄛ壠徿గ륬䣸䙖Ԋᶵ㫚⿖悢ꖀ曜Ốꔩ혁啱</Password>
+    </SqlSnapshotUpdate>
+    <FolderUpdate imisconfiguration="updatable" path="WIW\Graphics\Graphics.7z" destination="[ImisInstallDir]\IMIS_IETM\graphics\WIW_CGMS\CGM4\"/>
+    <FolderUpdate imisconfiguration="updatable" path="WIW\FrontMatter\FrontMatter.7z" destination="[ImisInstallDir]\DCWIWeb\tomcat\webapps\wi\userContent\"/>
+    <FolderUpdate imisconfiguration="updatable" path="WIW\SymbolLibrary\SymbolLibrary.7z" destination="[ImisInstallDir]\DCWIWeb\tomcat\webapps\wi\symbolLibrary\"/>
+    <FolderUpdate imisconfiguration="updatable" path="Documents\C130_INCORPORATION\C130_INCORPORATION.7z" destination="[ImisInstallDir]\Documents\Help\C130_INCORPORATION\"/>
+    <FileUpdate imisconfiguration="updatable" action="add" path="Documents\ChangeInformation\latestchangeinformation.htm" destination="[ImisInstallDir]\Documents\"/>
+    <FileUpdate imisconfiguration="updatable" action="add" path="Documents\TitlePage\titlepage.htm" destination="[ImisInstallDir]\Documents\"/>
+    <SqlSnapshotUpdate imisconfiguration="updatable" path="C130_Reference\snapshot.idbss">
+      <Database>C130_Reference</Database>
+      <User>ImisAdmin</User>
+      <Password>툏涣㽐੸퇖橊ᄛ壠徿గ륬䣸䙖Ԋᶵ㫚⿖悢ꖀ曜Ốꔩ혁啱</Password>
+    </SqlSnapshotUpdate>
+    <SqlSnapshotUpdate imisconfiguration="updatable" path="WUCDB\snapshot.idbss">
+      <Database>WUCDB</Database>
+      <User>ImisAdmin</User>
+      <Password>툏涣㽐੸퇖橊ᄛ壠徿గ륬䣸䙖Ԋᶵ㫚⿖悢ꖀ曜Ốꔩ혁啱</Password>
+    </SqlSnapshotUpdate>
+    <SqlScriptUpdate imisconfiguration="updatable" path="Versions\VersionsUpdate.sql">
+      <Database>Versions</Database>
+      <User>ImisAdmin</User>
+      <Password>툏涣㽐੸퇖橊ᄛ壠徿గ륬䣸䙖Ԋᶵ㫚⿖悢ꖀ曜Ốꔩ혁啱</Password>
+    </SqlScriptUpdate>
+  </Updates>
+</ImisUpdate>

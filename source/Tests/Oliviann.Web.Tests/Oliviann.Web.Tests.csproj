@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net45;netcoreapp2.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <Import Project="..\..\UnitTesting.targets" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Oliviann.Web\Oliviann.Web.csproj" />
+        <ProjectReference Include="..\Oliviann.Common.TestObjects\Oliviann.Common.TestObjects.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+        <ProjectReference Include="..\..\Oliviann.Web.WebForms\Oliviann.Web.WebForms.csproj" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Web" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services\" />
+    </ItemGroup>
+</Project>

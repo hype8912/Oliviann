@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net40;net45</TargetFrameworks>
+		<AssemblyName>Oliviann.Reuse.Caching.EnterpriseLibrary</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<RootNamespace>Oliviann.Caching</RootNamespace>
+
+		<Description>A library that creates a common interface for the Enterprise Library Caching Application Block.</Description>
+		<PackageTags>reuse cache enterprisecache</PackageTags>
+	</PropertyGroup>
+
+	<Import Project="..\OliviannInfo.targets" />
+
+	<ItemGroup>
+		<PackageReference Include="EnterpriseLibrary.Caching" Version="5.0.505" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Oliviann.Caching\Oliviann.Caching.csproj" />
+		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net35'">
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+		<PackageReference Include="EnterpriseLibrary.Common" Version="5.0.505" />
+		<PackageReference Include="Unity.Interception" Version="5.5.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+		<PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+		<PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304" />
+	</ItemGroup>
+
+</Project>

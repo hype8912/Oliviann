@@ -1,0 +1,1 @@
+﻿TestArchive.7z password = 1234567

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net45;netcoreapp2.0</TargetFrameworks>
+        <NoWarn>CS0108</NoWarn>
+    </PropertyGroup>
+
+    <Import Project="..\..\UnitTesting.targets" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Oliviann.Common\Oliviann.Common.csproj" />
+        <ProjectReference Include="..\..\Oliviann.Data.Common\Oliviann.Data.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='net45' Or '$(TargetFramework)'=='net451'">
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+    </ItemGroup>
+</Project>
