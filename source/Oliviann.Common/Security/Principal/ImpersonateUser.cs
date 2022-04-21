@@ -51,11 +51,9 @@ namespace Oliviann.Security.Principal
         {
             ADP.CheckArgumentNull(act, nameof(act));
 
-            using (var impersonate = new ImpersonateUser())
-            {
-                impersonate.LogonUser(userName, domain, password);
-                act.Invoke();
-            }
+            using var impersonate = new ImpersonateUser();
+            impersonate.LogonUser(userName, domain, password);
+            act.Invoke();
         }
 
         /// <summary>
@@ -110,6 +108,7 @@ namespace Oliviann.Security.Principal
         {
             this.context?.Undo();
             this.context?.Dispose();
+            GC.SuppressFinalize(this);
         }
 
         #endregion Methods

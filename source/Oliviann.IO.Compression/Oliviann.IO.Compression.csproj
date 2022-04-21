@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Compression</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.IO.Compression</RootNamespace>
 
 		<Description>A collection of methods to make performing compression in .NET Framework easier.</Description>

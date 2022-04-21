@@ -74,23 +74,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Common.TestObjects
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Testing.Tests", "Tests\Oliviann.Testing.Tests\Oliviann.Testing.Tests.csproj", "{8E881091-7C86-4E32-B431-EF3FDD828297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Data.Tests", "Tests\Oliviann.Data.Tests\Oliviann.Data.Tests.csproj", "{06A6015C-18F7-427F-B89D-C8BC8512175C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Data.Tests", "Tests\Oliviann.Data.Tests\Oliviann.Data.Tests.csproj", "{06A6015C-18F7-427F-B89D-C8BC8512175C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Caching.EnterpriseLibrary.Tests", "Tests\Oliviann.Caching.EnterpriseLibrary.Tests\Oliviann.Caching.EnterpriseLibrary.Tests.csproj", "{952489E9-C23C-4C09-8D65-7AAB8A9B07C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Caching.EnterpriseLibrary.Tests", "Tests\Oliviann.Caching.EnterpriseLibrary.Tests\Oliviann.Caching.EnterpriseLibrary.Tests.csproj", "{952489E9-C23C-4C09-8D65-7AAB8A9B07C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Caching.NCache.Tests", "Tests\Oliviann.Caching.NCache.Tests\Oliviann.Caching.NCache.Tests.csproj", "{4F306B84-7F4B-49CA-AEF5-F58DCCF7B0EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Caching.NCache.Tests", "Tests\Oliviann.Caching.NCache.Tests\Oliviann.Caching.NCache.Tests.csproj", "{4F306B84-7F4B-49CA-AEF5-F58DCCF7B0EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Caching.Redis.Tests", "Tests\Oliviann.Caching.Redis.Tests\Oliviann.Caching.Redis.Tests.csproj", "{2E957556-7707-4747-9B4D-74D24AF616B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Caching.Redis.Tests", "Tests\Oliviann.Caching.Redis.Tests\Oliviann.Caching.Redis.Tests.csproj", "{2E957556-7707-4747-9B4D-74D24AF616B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Data.Common.Tests", "Tests\Oliviann.Data.Common.Tests\Oliviann.Data.Common.Tests.csproj", "{2C8F2880-83B2-4109-85BA-8FA1FC61899F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Data.Common.Tests", "Tests\Oliviann.Data.Common.Tests\Oliviann.Data.Common.Tests.csproj", "{2C8F2880-83B2-4109-85BA-8FA1FC61899F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.InterProcessHelper.Tests", "Tests\Oliviann.InterProcessHelper.Tests\Oliviann.InterProcessHelper.Tests.csproj", "{E1CAC847-B8D7-4803-A034-0740D5FCF75C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.InterProcessHelper.Tests", "Tests\Oliviann.InterProcessHelper.Tests\Oliviann.InterProcessHelper.Tests.csproj", "{E1CAC847-B8D7-4803-A034-0740D5FCF75C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.IO.Compression.Tests", "Tests\Oliviann.IO.Compression.Tests\Oliviann.IO.Compression.Tests.csproj", "{2931115E-5CC2-4E63-923A-D5578F00875B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.IO.Compression.Tests", "Tests\Oliviann.IO.Compression.Tests\Oliviann.IO.Compression.Tests.csproj", "{2931115E-5CC2-4E63-923A-D5578F00875B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Web.Api.Tests", "Tests\Oliviann.Web.Api.Tests\Oliviann.Web.Api.Tests.csproj", "{9692AD32-186E-42A4-84E9-D9996B8DBD18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Web.Api.Tests", "Tests\Oliviann.Web.Api.Tests\Oliviann.Web.Api.Tests.csproj", "{9692AD32-186E-42A4-84E9-D9996B8DBD18}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oliviann.Web.Tests", "Tests\Oliviann.Web.Tests\Oliviann.Web.Tests.csproj", "{233B02C3-19C7-413E-AC54-37CF41CA89D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oliviann.Windows", "Oliviann.Windows\Oliviann.Windows.csproj", "{0ABEE6FA-CF27-4D8C-AAA1-02B63AEDC9E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -238,6 +240,10 @@ Global
 		{233B02C3-19C7-413E-AC54-37CF41CA89D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{233B02C3-19C7-413E-AC54-37CF41CA89D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{233B02C3-19C7-413E-AC54-37CF41CA89D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABEE6FA-CF27-4D8C-AAA1-02B63AEDC9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABEE6FA-CF27-4D8C-AAA1-02B63AEDC9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABEE6FA-CF27-4D8C-AAA1-02B63AEDC9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABEE6FA-CF27-4D8C-AAA1-02B63AEDC9E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -273,6 +279,7 @@ Global
 		{2931115E-5CC2-4E63-923A-D5578F00875B} = {6F677889-BCE4-4B90-92BD-7292A23D793A}
 		{9692AD32-186E-42A4-84E9-D9996B8DBD18} = {6F677889-BCE4-4B90-92BD-7292A23D793A}
 		{233B02C3-19C7-413E-AC54-37CF41CA89D9} = {6F677889-BCE4-4B90-92BD-7292A23D793A}
+		{0ABEE6FA-CF27-4D8C-AAA1-02B63AEDC9E7} = {A0755560-7D9A-4B3F-8986-B79BBA877D6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A083DFC-1DE7-4AEF-8C32-E5B1E732100F}

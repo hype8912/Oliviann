@@ -60,7 +60,7 @@ namespace Oliviann.Runtime.Serialization
             ADP.CheckArgumentNull(serializer, nameof(serializer));
             if (data == null)
             {
-                return default(T);
+                return default;
             }
 
             using (var stream = new MemoryStream(data))

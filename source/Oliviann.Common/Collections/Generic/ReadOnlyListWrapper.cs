@@ -44,7 +44,7 @@ namespace Oliviann.Collections.Generic
         /// </summary>
         /// <param name="capacity">The number of elements that the new list can
         /// initially store.</param>
-        public ReadOnlyListWrapper(int capacity) : base(capacity)
+        public ReadOnlyListWrapper(int capacity) : base(capacity < 0 ? 0 : capacity)
         {
         }
 

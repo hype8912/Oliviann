@@ -107,7 +107,7 @@
         [Fact]
         public void DirectoryExistsArrayTest_EmptyDirs()
         {
-            var items = new string[0];
+            var items = Array.Empty<string>();
             bool result = DirectoryHelpers.Exists(items);
 
             Assert.True(result);
@@ -243,7 +243,7 @@
             this.fixture.DeletePaths.Add(toPath);
         }
 
-#endregion Move Tests
+        #endregion Move Tests
 
         #region Copy Tests
 

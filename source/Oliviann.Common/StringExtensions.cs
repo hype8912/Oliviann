@@ -163,27 +163,34 @@
         /// <param name="character">The character to be removed.</param>
         /// <returns>A new string with all the specified characters removed.
         /// </returns>
-        public static unsafe string RemoveChar(this string text, char character)
+        public static string RemoveChar(this string text, char character)
         {
             if (text == null)
             {
                 return null;
             }
 
-            int len = text.Length;
-            fixed (char* pStr = text)
+#if SAFE
+            return text.Replace(character.ToString(), "");
+#else
+            unsafe
             {
-                int dstIdx = 0;
-                for (int i = 0; i < len; i++)
+                int len = text.Length;
+                fixed (char* pStr = text)
                 {
-                    if (pStr[i] != character)
+                    int dstIdx = 0;
+                    for (int i = 0; i < len; i++)
                     {
-                        pStr[dstIdx++] = pStr[i];
+                        if (pStr[i] != character)
+                        {
+                            pStr[dstIdx++] = pStr[i];
+                        }
                     }
-                }
 
-                return new string(pStr, 0, dstIdx);
+                    return new string(pStr, 0, dstIdx);
+                }
             }
+#endif
         }
 
         /// <summary>
@@ -321,7 +328,7 @@
         /// <param name="text">The text to be reversed.</param>
         /// <returns>Returns the same object if null or empty; otherwise, a new
         /// reverse string.</returns>
-        public static unsafe string Reverse(this string text)
+        public static string Reverse(this string text)
         {
             if (text.IsNullOrEmpty())
             {
@@ -329,19 +336,28 @@
             }
 
             string newStr = text;
-            int lowerIndex = 0;
-            int upperIndex = newStr.Length - 1;
-
-            fixed (char* pStr = newStr)
+#if SAFE
+            char[] charArray = text.ToCharArray();
+            Array.Reverse(charArray);
+            newStr = new string(charArray);
+#else
+            unsafe
             {
-                while (lowerIndex < upperIndex)
-                {
-                    char temp = pStr[upperIndex];
+                int lowerIndex = 0;
+                int upperIndex = newStr.Length - 1;
 
-                    pStr[upperIndex--] = pStr[lowerIndex];
-                    pStr[lowerIndex++] = temp;
+                fixed (char* pStr = newStr)
+                {
+                    while (lowerIndex < upperIndex)
+                    {
+                        char temp = pStr[upperIndex];
+
+                        pStr[upperIndex--] = pStr[lowerIndex];
+                        pStr[lowerIndex++] = temp;
+                    }
                 }
             }
+#endif
 
             return newStr;
         }
@@ -997,7 +1013,7 @@
 
         #endregion Validations
 
-#region Html
+        #region Html
 
 #if !NETSTANDARD1_3
 
@@ -1021,9 +1037,9 @@
 
 #endif
 
-#endregion Html
+        #endregion Html
 
-#region Converts
+        #region Converts
 
         /// <summary>
         /// Converts the file path location from admin UNC path to local path.
@@ -1200,9 +1216,9 @@
         [DebuggerStepThrough]
         public static string ValueOrDefault(this string text) => text.IsNullOrEmpty() ? null : text;
 
-#endregion Converts
+        #endregion Converts
 
-#region Formats
+        #region Formats
 
         /// <summary>
         /// Replaces the format item in a specified System.String with the text
@@ -1262,9 +1278,9 @@
             return string.Concat(appendText, text, appendText);
         }
 
-#endregion Formats
+        #endregion Formats
 
-#region Joins
+        #region Joins
 
         /// <summary>
         /// Concatenates all the elements of a string array, using the specified
@@ -1342,6 +1358,6 @@
 #endif
         }
 
-#endregion Joins
+        #endregion Joins
     }
 }

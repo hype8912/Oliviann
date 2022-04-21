@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net40;netcoreapp3.0</TargetFrameworks>
+        <AssemblyName>Oliviann.Reuse.Windows</AssemblyName>
+        <RootNamespace>Oliviann.Windows</RootNamespace>
+
+        <Description>A library make developing .NET devlopment for Windows easier.</Description>
+        <PackageTags>reuse windows </PackageTags>
+    </PropertyGroup>
+    
+    <Import Project="..\OliviannInfo.targets" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+    </ItemGroup>
+
+</Project>

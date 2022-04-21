@@ -80,10 +80,7 @@ namespace Oliviann.Web
         /// <summary>
         /// Populates all the mappings to the dictionary.
         /// </summary>
-        private static void PopulateMappings()
-        {
-            mappings.Add(".json", "application/json");
-        }
+        private static void PopulateMappings() => mappings.Add(".json", "application/json");
 
 #if NET35 || NET40
 

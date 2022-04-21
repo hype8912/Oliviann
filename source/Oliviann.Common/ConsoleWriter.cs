@@ -13,7 +13,7 @@
     /// <summary>
     /// Represents a writer to the console.
     /// </summary>
-    public class ConsoleWriter
+    public class ConsoleWriter : IWriter
     {
         #region Methods
 

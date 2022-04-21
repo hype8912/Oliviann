@@ -80,16 +80,15 @@
             ADP.CheckArgumentNull(unsecureText, "unsecuredText");
             SecureString secureText;
 
-            // If for some reason we have a problem using unsafe
-            // then uncomment this code below and comment out the
-            // lower code that uses unsafe. The unsafe method is
-            // approximately 10x faster creating a new object.
-            ////secureText = new SecureString();
-            ////foreach (char textChar in unsecureText)
-            ////{
-            ////    secureText.AppendChar(textChar);
-            ////}
-
+#if SAFE
+            // The unsafe method is approximately 10x faster creating a
+            // new object.
+            secureText = new SecureString();
+            foreach (char textChar in unsecureText)
+            {
+                secureText.AppendChar(textChar);
+            }
+#else
             unsafe
             {
                 fixed (char* textChar = unsecureText)
@@ -97,6 +96,7 @@
                     secureText = new SecureString(textChar, unsecureText.Length);
                 }
             }
+#endif
 
             secureText.MakeReadOnly();
             return secureText;

@@ -10,7 +10,7 @@
     /// Represents an attribute for a type of hashing algorithm.
     /// </summary>
     [AttributeUsage(AttributeTargets.Field)]
-    public class HashEngineAttribute : Attribute
+    public sealed class HashEngineAttribute : Attribute
     {
         #region Constructor/Destructor
 

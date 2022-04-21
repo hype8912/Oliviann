@@ -86,7 +86,7 @@
         {
             if (disposing)
             {
-                this.client.DisposeSafe();
+                this.client?.Dispose();
                 this.client = null;
             }
         }

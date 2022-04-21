@@ -13,7 +13,7 @@
     /// </summary>
     /// <typeparam name="T">Specifies the element type of the binary tree.
     /// </typeparam>
-    public class BinaryTree<T> where T : IComparable<T>
+    public class BinaryTree<T> : IEnumerable<T>, IEnumerable where T : IComparable<T>, IComparable
 
     {
         #region Constructor/Destructor
@@ -137,31 +137,7 @@
         }
 
         /// <inheritdoc />
-        public IEnumerator<T> GetEnumerator()
-        {
-            if (this.Root != null)
-            {
-                yield return this.Root.Value;
-
-                if
-            }
-
-            if (Left != null)
-            {
-                foreach (var v in Left)
-                {
-                    yield return v;
-                }
-            }
-
-            if (Right != null)
-            {
-                foreach (var v in Right)
-                {
-                    yield return v;
-                }
-            }
-        }
+        public IEnumerator<T> GetEnumerator() => new BinaryTreeEnumerator<T>(this);
 
         /// <inheritdoc />
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();

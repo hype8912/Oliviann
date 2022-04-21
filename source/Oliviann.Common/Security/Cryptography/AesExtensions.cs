@@ -28,6 +28,7 @@
         /// <returns>
         /// The decrypted string as a <see cref="SecureString" />.
         /// </returns>
+        [Obsolete("Use SymmetricAlgorithmExtensions.DecryptStringSecure instead.", true)]
         public static SecureString DecryptStringSecure(this Aes provider, string encryptedText) =>
             provider.DecryptStringSecure(encryptedText, Convert.FromBase64String);
 
@@ -43,6 +44,7 @@
         /// <returns>
         /// The decrypted string as a <see cref="SecureString" />.
         /// </returns>
+        [Obsolete("Use SymmetricAlgorithmExtensions.DecryptStringSecure instead.", true)]
         public static SecureString DecryptStringSecure(
             this Aes provider,
             string encryptedText,
@@ -58,6 +60,7 @@
         /// <param name="decryptedText">The decrypted text to be encrypted.
         /// </param>
         /// <returns>The encrypted string.</returns>
+        [Obsolete("Use SymmetricAlgorithmExtensions.EncryptStringSecure instead.", true)]
         public static string EncryptStringSecure(this Aes provider, SecureString decryptedText) =>
             provider.EncryptStringSecure(decryptedText, Convert.ToBase64String);
 
@@ -70,6 +73,7 @@
         /// </param>
         /// <param name="textConverter">The custom text converter.</param>
         /// <returns>The encrypted string.</returns>
+        [Obsolete("Use SymmetricAlgorithmExtensions.EncryptStringSecure instead.", true)]
         public static string EncryptStringSecure(
             this Aes provider,
             SecureString decryptedText,

@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40;net45</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Caching.EnterpriseLibrary</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.Caching</RootNamespace>
 
 		<Description>A library that creates a common interface for the Enterprise Library Caching Application Block.</Description>

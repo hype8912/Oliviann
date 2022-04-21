@@ -39,7 +39,11 @@
         /// releasing, or resetting unmanaged resources.
         /// </summary>
         /// <filterpriority>2</filterpriority>
-        public void Dispose() => this.Manager.DisposeSafe();
+        public void Dispose()
+        {
+            this.Manager?.Dispose();
+            GC.SuppressFinalize(this);
+        }
 
         /// <summary>
         /// Gets the default instance of the database manager if not <c>null</c>
@@ -49,7 +53,7 @@
         /// <returns>The database manager instance.</returns>
         protected IDbManager GetManager()
         {
-            return this.Manager ?? (this.Manager = new DbManager(this.Provider, this.ConnectionString));
+            return this.Manager ??= new DbManager(this.Provider, this.ConnectionString);
         }
 
         /// <summary>

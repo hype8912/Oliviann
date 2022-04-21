@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Testing</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.Testing</RootNamespace>
 
 		<Description>A library to make writing unit tests and UI tests easier using MS Test and UIAutomation.</Description>

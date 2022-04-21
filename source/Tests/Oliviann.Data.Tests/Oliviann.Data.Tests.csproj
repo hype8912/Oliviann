@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>net45;net451;netcoreapp2.0</TargetFrameworks>
         <IsPackable>false</IsPackable>
-        <NoWarn>CS0108;CS0618</NoWarn>
+        <NoWarn>CS0108;CS0618;CA1820</NoWarn>
     </PropertyGroup>
 
     <Import Project="..\..\UnitTesting.targets" />

@@ -31,10 +31,7 @@
         /// Initializes a new instance of the <see cref="UnityResolver"/> class.
         /// </summary>
         /// <param name="container">The container instance.</param>
-        public UnityResolver(IUnityContainer container)
-        {
-            this._unityContainer = container;
-        }
+        public UnityResolver(IUnityContainer container) => this._unityContainer = container;
 
         #endregion
 

@@ -35,10 +35,7 @@
         /// of a catastrophic failure, false. In this case, it generates a
         /// releaseHandleFailed MDA Managed Debugging Assistant.
         /// </returns>
-        protected override bool ReleaseHandle()
-        {
-            return UnsafeNativeMethods.CloseHandle(base.handle);
-        }
+        protected override bool ReleaseHandle() => UnsafeNativeMethods.CloseHandle(base.handle);
 
         #endregion Methods
     }

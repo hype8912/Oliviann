@@ -59,10 +59,8 @@
         /// stream, returns the empty string("").</returns>
         public static string ReadToEnd(this Stream stream)
         {
-            using (var reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
+            using var reader = new StreamReader(stream);
+            return reader.ReadToEnd();
         }
 
         /// <summary>
@@ -169,7 +167,7 @@
             }
             catch (Exception ex)
             {
-               Trace.TraceError(@"An error occurred converting object to a Stream: " + ex.Message);
+                Trace.TraceError(@"An error occurred converting object to a Stream: " + ex.Message);
             }
 
             return memStream;

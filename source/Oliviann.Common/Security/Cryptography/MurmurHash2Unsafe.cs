@@ -1,4 +1,5 @@
-﻿//-----------------------------------------------------------------------
+﻿#if !SAFE
+//-----------------------------------------------------------------------
 // <copyright file="MurmurHash2Unsafe.cs">
 //     Version: MPL 1.1/GPL 2.0/LGPL 2.1
 //
@@ -65,10 +66,7 @@ namespace Oliviann.Security.Cryptography
         /// <returns>
         /// The hash code value for the specified data.
         /// </returns>
-        public uint Hash(byte[] data)
-        {
-            return this.Hash(data, 0xc58f1a7b);
-        }
+        public uint Hash(byte[] data) => this.Hash(data, 0xc58f1a7b);
 
         /// <summary>
         /// Hashes the specified data using the specified hash
@@ -81,6 +79,7 @@ namespace Oliviann.Security.Cryptography
         /// </returns>
         public unsafe uint Hash(byte[] data, uint seed)
         {
+            ADP.CheckArgumentNull(data, nameof(data));
             int length = data.Length;
             if (length < 1)
             {
@@ -112,7 +111,7 @@ namespace Oliviann.Security.Cryptography
                 {
                     case 3:
                         h ^= (ushort)(*realData);
-                        h ^= ((uint) * (((byte*)realData) + 2)) << 16;
+                        h ^= ((uint)*(((byte*)realData) + 2)) << 16;
                         h *= M;
                         break;
 
@@ -135,3 +134,5 @@ namespace Oliviann.Security.Cryptography
         }
     }
 }
+
+#endif

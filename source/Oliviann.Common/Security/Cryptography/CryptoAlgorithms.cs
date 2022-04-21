@@ -10,7 +10,7 @@ namespace Oliviann.Security.Cryptography
     using System.Text;
     using Oliviann.Properties;
 
-#endregion Usings
+    #endregion Usings
 
     /// <summary>
     /// Represents an implementation of the FIPS compliant Cryptography Next
@@ -18,7 +18,7 @@ namespace Oliviann.Security.Cryptography
     /// </summary>
     public static class CryptoAlgorithms
     {
-#region Enums
+        #region Enums
 
         /// <summary>
         /// The type of hashing algorithm to be used.
@@ -110,9 +110,9 @@ namespace Oliviann.Security.Cryptography
             SHA512
         }
 
-#endregion Enums
+        #endregion Enums
 
-#region Compare Methods
+        #region Compare Methods
 
         /// <summary>
         /// Compares the specified hash to the specified text the determine if
@@ -141,15 +141,12 @@ namespace Oliviann.Security.Cryptography
         /// <returns>True if the specified <paramref name="text"/> matches the
         /// <paramref name="hash"/>; otherwise, false.
         /// </returns>
-        public static bool CompareHashes(string hash, string text, HashType type, Encoding enc)
-        {
-            string hash2 = ComputeHash(text, type, enc);
-            return hash2 == hash;
-        }
+        public static bool CompareHashes(string hash, string text, HashType type, Encoding enc) =>
+            ComputeHash(text, type, enc) == hash;
 
-#endregion Compare Methods
+        #endregion Compare Methods
 
-#region Compute Methods
+        #region Compute Methods
 
         /// <summary>
         /// Calculates the hash code for the specified text.
@@ -196,9 +193,9 @@ namespace Oliviann.Security.Cryptography
             return ComputeInternalHash(text, enc, algorithm);
         }
 
-#endregion Compute Methods
+        #endregion Compute Methods
 
-#region Helper Methods
+        #region Helper Methods
 
         /// <summary>
         /// Computes the hash value of the specified text.
@@ -290,7 +287,7 @@ namespace Oliviann.Security.Cryptography
             }
         }
 
-#endregion Helper Methods
+        #endregion Helper Methods
     }
 }
 

@@ -1,8 +1,11 @@
-﻿namespace Oliviann.Security.Cryptography
+﻿#if NETFRAMEWORK || NETSTANDARD1_3 || NETSTANDARD2_0
+
+namespace Oliviann.Security.Cryptography
 {
     #region Usings
 
     using System.Runtime.CompilerServices;
+    using Oliviann.Numerics;
 
     #endregion Usings
 
@@ -10,16 +13,12 @@
     /// Represents a collection of commonly used helper methods for making
     /// generating hash codes easier.
     /// </summary>
+    /// <remarks>https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/shared/System/HashCode.cs</remarks>
     public static class HashCode
     {
         #region Fields
 
-        /// <summary>
-        /// The collection of prime numbers to use for generating the hash
-        /// codes.
-        /// </summary>
         private const uint Prime1 = 2654435761U;
-
         private const uint Prime2 = 2246822519U;
         private const uint Prime3 = 3266489917U;
         private const uint Prime4 = 668265263U;
@@ -41,12 +40,6 @@
         /// </returns>
         public static int Combine<T1>(T1 value1, uint seed = 0)
         {
-            // Provide a way of diffusing bits from something with a limited
-            // input hash space. For example, many enums only have a few
-            // possible hashes, only using the bottom few bits of the code. Some
-            // collections are built on the assumption that hashes are spread
-            // over a larger space, so diffusing the bits may help the
-            // collection work more efficiently.
             var hc1 = (uint)(value1?.GetHashCode() ?? 0);
 
             uint hash = MixEmptyState(seed);
@@ -470,10 +463,7 @@
 
         #region Helper Methods
 
-#if !NET35 && !NET40
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-
+        [MethodImpl((short)256)]
         private static void Initialize(uint seed, out uint v1, out uint v2, out uint v3, out uint v4)
         {
             v1 = seed + Prime1 + Prime2;
@@ -482,35 +472,23 @@
             v4 = seed - Prime1;
         }
 
-#if !NET35 && !NET40
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-
+        [MethodImpl(256)]
         private static uint Round(uint hash, uint input)
         {
-            hash += input * Prime2;
-            hash = hash.RotateLeft(13);
-            hash *= Prime1;
-            return hash;
+            return BitOperations.RotateLeft(hash + input * Prime2, 13) * Prime1;
         }
 
-#if !NET35 && !NET40
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-
+        [MethodImpl(256)]
         private static uint QueueRound(uint hash, uint queuedValue)
         {
-            hash += queuedValue * Prime3;
-            return hash.RotateLeft(17) * Prime4;
+            return BitOperations.RotateLeft(hash + queuedValue * Prime3, 17) * Prime4;
         }
 
-#if !NET35 && !NET40
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-
+        [MethodImpl(256)]
         private static uint MixState(uint v1, uint v2, uint v3, uint v4)
         {
-            return v1.RotateLeft(1) + v2.RotateLeft(7) + v3.RotateLeft(12) + v4.RotateLeft(18);
+            return BitOperations.RotateLeft(v1, 1) + BitOperations.RotateLeft(v2, 7) + BitOperations.RotateLeft(v3, 12) +
+                BitOperations.RotateLeft(v4, 18);
         }
 
         private static uint MixEmptyState(uint seed) => seed + Prime5;
@@ -521,10 +499,7 @@
         /// </summary>
         /// <param name="hash">The hash before the final fixes.</param>
         /// <returns>A hash with the final fixes completed.</returns>
-#if !NET35 && !NET40
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-
+        [MethodImpl(256)]
         private static uint MixFinal(uint hash)
         {
             hash ^= hash >> 15;
@@ -538,3 +513,5 @@
         #endregion Helper Methods
     }
 }
+
+#endif

@@ -56,10 +56,7 @@
         /// </summary>
         /// <param name="enableRandomPool">if set to true enables a random pool.
         /// </param>
-        public SecureRandom(bool enableRandomPool)
-        {
-            this.IsRandomPoolEnabled = enableRandomPool;
-        }
+        public SecureRandom(bool enableRandomPool) => this.IsRandomPoolEnabled = enableRandomPool;
 
         #endregion Constructor/Destructor
 

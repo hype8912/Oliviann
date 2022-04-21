@@ -78,6 +78,9 @@
                     // Ignore exception.
                 }
             }
+
+            this.DeletePaths.Clear();
+            GC.SuppressFinalize(this);
         }
 
         #endregion Methods

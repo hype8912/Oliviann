@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Data.SqlServer.Compact</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.Data</RootNamespace>
 
 		<Description>A library that extends the capability of the Oliviann.Data library for supporting Sql Server Compact.</Description>

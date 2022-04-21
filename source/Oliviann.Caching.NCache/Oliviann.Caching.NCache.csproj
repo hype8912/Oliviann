@@ -2,8 +2,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40;netcoreapp2.0</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Caching.NCache</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.Caching</RootNamespace>
 
 		<Description>A library that creates a common interface for NCache cache.</Description>

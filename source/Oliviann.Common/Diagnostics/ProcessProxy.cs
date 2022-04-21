@@ -71,7 +71,11 @@
         #region Methods
 
         /// <inheritdoc />
-        public void Dispose() => this._currentProcess.Dispose();
+        public void Dispose()
+        {
+            this._currentProcess.Dispose();
+            GC.SuppressFinalize(this);
+        }
 
         /// <inheritdoc />
         public Process GetProcess() => this._currentProcess;

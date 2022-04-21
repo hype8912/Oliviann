@@ -61,11 +61,12 @@
         /// <returns>A string matching the specified source array.</returns>
         public static string ConvertToString(this ushort[] source)
         {
-            if (source == null)
+            if (source == null || source.Length == 0)
             {
                 return string.Empty;
             }
 
+#if SAFE
             var builder = new StringBuilder(source.Length);
             foreach (ushort value in source)
             {
@@ -73,6 +74,18 @@
             }
 
             return builder.ToString();
+#else
+            string newStr; ;
+            unsafe
+            {
+                fixed (ushort* dataPtr = &source[0])
+                {
+                    newStr = new string((char*)dataPtr, 0, source.Length);
+                }
+            }
+
+            return newStr;
+#endif
         }
 
         /// <summary>

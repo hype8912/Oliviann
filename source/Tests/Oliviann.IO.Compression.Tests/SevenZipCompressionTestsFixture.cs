@@ -65,6 +65,8 @@
             {
                 Directory.Delete(this.TemporaryDirPath, true);
             }
+
+            GC.SuppressFinalize(this);
         }
 
         #endregion Methods

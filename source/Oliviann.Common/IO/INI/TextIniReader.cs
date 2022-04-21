@@ -31,10 +31,7 @@
         /// Initializes a new instance of the <see cref="TextIniReader"/> class.
         /// </summary>
         /// <param name="iniFilePath">The ini file path.</param>
-        public TextIniReader(string iniFilePath) : base(iniFilePath)
-        {
-            this.ReadFile();
-        }
+        public TextIniReader(string iniFilePath) : base(iniFilePath) => this.ReadFile();
 
         #endregion Constructor/Destructor
 

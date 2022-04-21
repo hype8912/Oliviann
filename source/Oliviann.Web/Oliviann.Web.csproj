@@ -3,8 +3,6 @@
     <PropertyGroup>
         <TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
         <AssemblyName>Oliviann.Reuse.Web</AssemblyName>
-        <PackageId>$(AssemblyName)</PackageId>
-        <Title>$(AssemblyName)</Title>
         <RootNamespace>Oliviann</RootNamespace>
 
         <Description>A library of tools, controls, and extensions to make working with ASP.NET and web services easier.</Description>

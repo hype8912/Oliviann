@@ -3,8 +3,6 @@
   <PropertyGroup>
     <TargetFrameworks>net40</TargetFrameworks>
     <AssemblyName>Oliviann.Reuse.Web.WebForms</AssemblyName>
-    <PackageId>$(AssemblyName)</PackageId>
-    <Title>$(AssemblyName)</Title>
     <RootNamespace>Oliviann.Web</RootNamespace>
 
     <Description>A library to make working with ASP.NET Web Forms easier.</Description>

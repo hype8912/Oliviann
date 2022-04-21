@@ -249,7 +249,7 @@
         {
             if (disposing)
             {
-                this.redisConnection.DisposeSafe();
+                this.redisConnection?.Dispose();
                 this.redisConnection = null;
             }
         }

@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.ServiceModel</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.ServiceModel</RootNamespace>
 
 		<Description>A library of tools, controls, and extensions to make working with WCF easier.</Description>

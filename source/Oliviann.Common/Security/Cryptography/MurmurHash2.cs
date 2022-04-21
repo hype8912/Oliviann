@@ -76,12 +76,9 @@ namespace Oliviann.Security.Cryptography
         /// <returns>
         /// The hash code value for the specified data.
         /// </returns>
-        /// <exception cref="NullReferenceException">Thrown if data is null.
+        /// <exception cref="ArgumentNullException">Thrown if data is null.
         /// </exception>
-        public uint Hash(byte[] data)
-        {
-            return this.Hash(data, 0xc58f1a7b);
-        }
+        public uint Hash(byte[] data) => this.Hash(data, 0xc58f1a7b);
 
         /// <summary>
         /// Hashes the specified data using the specified hash
@@ -92,10 +89,11 @@ namespace Oliviann.Security.Cryptography
         /// <returns>
         /// The hash code value for the specified data.
         /// </returns>
-        /// <exception cref="NullReferenceException">Thrown if data is null.
+        /// <exception cref="ArgumentNullException">Thrown if data is null.
         /// </exception>
         public uint Hash(byte[] data, uint seed)
         {
+            ADP.CheckArgumentNull(data, nameof(data));
             int length = data.Length;
             if (length == 0)
             {

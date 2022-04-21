@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net40;netstandard2.0</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Data.Oracle</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.Data.Oracle</RootNamespace>
 
 		<Description>A library that extends the capability of the Oliviann.Data library for supporting Oracle.</Description>

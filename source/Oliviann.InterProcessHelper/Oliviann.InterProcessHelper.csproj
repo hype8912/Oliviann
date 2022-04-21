@@ -4,8 +4,6 @@
 		<OutputType>Exe</OutputType>
 		<TargetFrameworks>net40</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.InterProcessHelper</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.InterProcessHelper</RootNamespace>
 
 		<Description>A helper application for launching a 32-bit process from a 64-bit process.</Description>
@@ -17,6 +15,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Oliviann.Common\Oliviann.Common.csproj" />
+		<ProjectReference Include="..\Oliviann.Windows\Oliviann.Windows.csproj" />
 	</ItemGroup>
 
 </Project>

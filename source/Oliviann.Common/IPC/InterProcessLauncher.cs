@@ -144,9 +144,9 @@ namespace Oliviann.IPC
                 return;
             }
 
-            this.process.DisposeSafe();
-            this.mappedAccessor.DisposeSafe();
-            this.mappedFile.DisposeSafe();
+            this.process?.Dispose();
+            this.mappedAccessor?.Dispose();
+            this.mappedFile?.Dispose();
         }
 
         #endregion Methods

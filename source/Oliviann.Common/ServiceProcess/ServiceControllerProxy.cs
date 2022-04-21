@@ -71,10 +71,8 @@ namespace Oliviann.ServiceProcess
                 return false;
             }
 
-            using (var controller = new ServiceControllerProxy(serviceName))
-            {
-                return serviceFunc(controller);
-            }
+            using var controller = new ServiceControllerProxy(serviceName);
+            return serviceFunc(controller);
         }
 
         /// <summary>
@@ -145,7 +143,11 @@ namespace Oliviann.ServiceProcess
         #region Methods
 
         /// <inheritdoc />
-        public void Dispose() => this._controller.DisposeSafe();
+        public void Dispose()
+        {
+            this._controller?.Dispose();
+            GC.SuppressFinalize(this);
+        }
 
         /// <inheritdoc />
         public void Refresh() => this._controller.Refresh();
@@ -154,7 +156,7 @@ namespace Oliviann.ServiceProcess
         public void Start() => this._controller.Start();
 
         /// <inheritdoc />
-        public void Start(string[] args)  => this._controller.Start(args);
+        public void Start(string[] args) => this._controller.Start(args);
 
         /// <inheritdoc />
         public void Stop() => this._controller.Stop();

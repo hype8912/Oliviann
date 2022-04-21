@@ -16,7 +16,7 @@
     {
         #region Fields
 
-        private PathCleanupFixture fixture;
+        private readonly PathCleanupFixture fixture;
 
         #endregion Fields
 
@@ -27,10 +27,7 @@
         /// <see cref="DirectoryInfoExtensionsTests"/> class.
         /// </summary>
         /// <param name="fixture">The fixture.</param>
-        public DirectoryInfoExtensionsTests(PathCleanupFixture fixture)
-        {
-            this.fixture = fixture;
-        }
+        public DirectoryInfoExtensionsTests(PathCleanupFixture fixture) => this.fixture = fixture;
 
         #endregion Constructors/Destructor
 

@@ -36,10 +36,7 @@ namespace Oliviann.Web
         /// class.
         /// </summary>
         /// <param name="context">The tract context instance.</param>
-        public TraceContextLogger(TraceContext context)
-        {
-            this.currentContext = context;
-        }
+        public TraceContextLogger(TraceContext context) => this.currentContext = context;
 
         #endregion
 

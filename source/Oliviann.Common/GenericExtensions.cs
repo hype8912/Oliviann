@@ -91,7 +91,7 @@
             // that object.
             if (instance == null)
             {
-                return default(T);
+                return default;
             }
 
             MemoryStream stream = null;
@@ -101,10 +101,10 @@
             {
                 stream = new MemoryStream();
                 var formatter = new BinaryFormatter
-                                    {
-                                        Context = new StreamingContext(StreamingContextStates.Clone),
-                                        TypeFormat = FormatterTypeStyle.TypesWhenNeeded
-                                    };
+                {
+                    Context = new StreamingContext(StreamingContextStates.Clone),
+                    TypeFormat = FormatterTypeStyle.TypesWhenNeeded
+                };
                 formatter.Serialize(stream, instance);
                 stream.Seek(0, SeekOrigin.Begin);
                 result = (T)formatter.Deserialize(stream);
@@ -195,7 +195,7 @@
         /// <returns>A generic collection containing the specified
         /// <paramref name="obj"/>.</returns>
         [DebuggerStepThrough]
-        public static List<T> PutList<T>(this T obj) => new List<T> { obj };
+        public static List<T> PutList<T>(this T obj) => new() { obj };
 
         /// <summary>
         /// Executes a series of statements making repeated reference to a

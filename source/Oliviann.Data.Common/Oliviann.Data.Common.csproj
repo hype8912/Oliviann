@@ -3,8 +3,6 @@
 	<PropertyGroup>
 		<TargetFrameworks>net45;netcoreapp2.0</TargetFrameworks>
 		<AssemblyName>Oliviann.Reuse.Data.Common</AssemblyName>
-		<PackageId>$(AssemblyName)</PackageId>
-		<Title>$(AssemblyName)</Title>
 		<RootNamespace>Oliviann.Data</RootNamespace>
 
 		<Description>A data library built for creating dynamic database query strings.</Description>

@@ -12,7 +12,7 @@
     /// </summary>
     /// <typeparam name="T">Specifies the element type of the binary tree.
     /// </typeparam>
-    public sealed class BinaryTreeNode<T> : IEquatable<BinaryTreeNode<T>> where T : IComparable<T>
+    public sealed class BinaryTreeNode<T> : IEquatable<BinaryTreeNode<T>> where T : IComparable<T>, IComparable
     {
         #region Constructor/Destructor
 

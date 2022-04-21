@@ -3,6 +3,7 @@
     #region Usings
 
     using System.Runtime.CompilerServices;
+    using Oliviann.Numerics;
 
     #endregion Usings
 
@@ -12,7 +13,7 @@
     /// implementation but has less chances of collisions.
     /// </summary>
     /// <remarks>I was able to make this code as fast as it will probably go but
-    /// MurmurHash3 was found to run slower on some CPUs and faster on some
+    /// MurmurHash3 was found to run slower on some CPUs and faster on other
     /// CPUs.</remarks>
     public class MurmurHash3 : ISeededHashAlgorithm
     {
@@ -25,10 +26,7 @@
         /// <returns>
         /// The hash code value for the specified data.
         /// </returns>
-        public uint Hash(byte[] data)
-        {
-            return this.Hash(data, 0xc58f1a7b);
-        }
+        public uint Hash(byte[] data) => this.Hash(data, 0xc58f1a7b);
 
         /// <summary>
         /// Hashes the specified data using the specified hash
@@ -41,6 +39,7 @@
         /// </returns>
         public uint Hash(byte[] data, uint seed)
         {
+            ADP.CheckArgumentNull(data, nameof(data));
             const uint C1 = 0xcc9e2d51;
             const uint C2 = 0x1b873593;
 
@@ -56,7 +55,7 @@
                     var b = (uint*)d;
                     while (blocks-- > 0)
                     {
-                        h1 = (h1 ^ ((*b++ * C1).RotateLeft(15) * C2)).RotateLeft(13) * 5 + 0xe6546b64;
+                        h1 = BitOperations.RotateLeft(h1 ^ (BitOperations.RotateLeft(*b++ * C1, 15) * C2), 13) * 5 + 0xe6546b64;
                     }
 
                     if (remainder > 0)
@@ -66,7 +65,7 @@
                 }
             }
 
-            h1 = (h1 ^ (uint)length).MixFinalMurmur3();
+            h1 = MixFinal(h1 ^ (uint)length);
             return h1;
         }
 
@@ -80,10 +79,7 @@
         /// <param name="tail">The data to be hashed.</param>
         /// <param name="remainder">The amount of remaining bytes.</param>
         /// <returns>A hash for the trailing bytes of data.</returns>
-#if !NET40 && !NET35
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-
+        [MethodImpl(256)]
         private static unsafe uint Tail(byte* tail, int remainder)
         {
             // Create our keys and initialize to 0.
@@ -103,7 +99,22 @@
                     break;
             }
 
-            return (k1 * 0xcc9e2d51).RotateLeft(15) * 0x1b873593;
+            return BitOperations.RotateLeft(k1 * 0xcc9e2d51, 15) * 0x1b873593;
+        }
+
+        /// <summary>
+        /// Performs the final hash of the data for MurmurHash3 hashing. Casts
+        /// magic spells and performs chants on final hash.
+        /// </summary>
+        /// <param name="hash">The hash before the final fixes.</param>
+        /// <returns>A hash with the final fixes completed.</returns>
+        [MethodImpl(256)]
+        private static uint MixFinal(uint hash)
+        {
+            // Pipelining friendly algorithm.
+            hash = (hash ^ (hash >> 16)) * 0x85ebca6b;
+            hash = (hash ^ (hash >> 13)) * 0xc2b2ae35;
+            return hash ^ (hash >> 16);
         }
 
         #endregion Helper Methods

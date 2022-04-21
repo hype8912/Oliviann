@@ -210,10 +210,7 @@
         /// </summary>
         /// <param name="ex">The exception object.</param>
         [DebuggerStepThrough]
-        private static void TraceException(Exception ex)
-        {
-            Trace.TraceError(ex.Message);
-        }
+        private static void TraceException(Exception ex) => Trace.TraceError(ex.Message);
 
         #endregion Trace
     }
